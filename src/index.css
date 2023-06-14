@@ -13,3 +13,168 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul, li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+p{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+/*-------Home page ---------*/
+.title{
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.movieList{
+   padding: 20px 0 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.MovieLink{
+  text-decoration: none;
+  padding: 2px 8px;
+}
+/*---------------------------------------------*/
+.container{
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.header__list{
+  padding: 20px 0;
+  border-bottom: solid 1px grey;
+}
+.header__list>nav{
+  display: flex;
+  gap: 20px;
+}
+
+.link{
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.link:active {
+  color: white;
+  background-color: orangered;
+}
+.Button{
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  border-radius: 15px;
+  background-color: #3f51b5;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  min-width: 180px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+  cursor: pointer;
+  transition: background-color 250ms linear;
+}
+.LinkBack{
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  column-gap: 10px;
+}  
+
+.MovieBox{
+  display: flex;
+  padding: 20px;
+  border-bottom: solid 1px grey;
+}
+
+.MovieInfo{
+  padding: 20px 40px;
+}
+
+.Title{
+  margin: 0;
+}
+
+.GenresList{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 16px;
+}
+
+.InfoBox{
+  padding: 20px;
+  border-bottom: solid 1px grey;
+}
+
+.CastItem {
+  margin: 10px 0 16px;
+  padding: 2px 8px;
+}
+
+.main{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.Form{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.Input{
+   display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  padding: 4px;
+}
+.Input::placeholder{
+  font: inherit;
+    font-size: 16px;
+}
+
+.buttonIcon{
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonIcon:hover{
+  transform: scale(1.2);
+}
