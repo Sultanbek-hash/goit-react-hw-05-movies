@@ -1,8 +1,9 @@
 import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect } from 'react';
-import { searchMovies } from 'components/Servise/GetApiMovies';
-import { useSearchParams, useLocation, Link } from 'react-router-dom';
+import { searchMovies } from '../Servise/GetApiMovies';
+import { useSearchParams, useLocation} from 'react-router-dom';
 import { SearchBar } from 'components/SearchBar/SearchBar';
+import { MovieList } from './MovieList';
 const Movies = () =>{
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
@@ -43,16 +44,8 @@ const Movies = () =>{
             <SearchBar onSubmit={handleSubmit} />
             {error && <p>There is no movies with this request. Please, try again</p>}
             <ul>
-            {moviesList.map(movie => {
-          return (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`} state={{ from: location }}>
-                {movie.original_title || movie.name}
-              </Link>
-            </li>
-          );
-        })}
-        {isLoading && <Loader />}
+            <MovieList movies={moviesList} />
+            {isLoading && <Loader />}
             </ul>
         </div>
     )
