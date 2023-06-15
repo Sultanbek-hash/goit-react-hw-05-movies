@@ -1,11 +1,10 @@
 import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect } from 'react';
 import { searchMovies } from '../Servise/GetApiMovies';
-import { useSearchParams, useLocation} from 'react-router-dom';
+import { useSearchParams} from 'react-router-dom';
 import { SearchBar } from 'components/SearchBar/SearchBar';
 import { MovieList } from './MovieList';
 const Movies = () =>{
-    const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     const movieName = searchParams.get('movieName') ?? '';
     const [moviesList, setMoviesList] = useState([]);
